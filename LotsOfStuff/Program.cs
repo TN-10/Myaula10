@@ -4,8 +4,9 @@ using System.Collections;
 namespace Aula10
 {
     /// <summary>Programa para testar o projeto</summary>
-    public class Program
+    public class Program 
     {
+     
         /// <summary>O programa começa aqui no Main</summary>
         /// <param name="args">Ignoramos os argumentos de linha de comandos neste programa</param>
         public static void Main(string[] args)
@@ -23,12 +24,12 @@ namespace Aula10
             // Instanciar um jogador com 70 quilos
             Player p = new Player(70.0f);
 
-            //
-            // Adicionar vários itens à mochila do jogador:
-            //
+        //
+        // Adicionar vários itens à mochila do jogador:
+        //
 
-            // Pão com 2 dias, 500 gramas
-            p.BagOfStuff.AddThing(new Food(FoodType.Bread, 2, 0.500f));
+        // Pão com 2 dias, 500 gramas
+        p.BagOfStuff.AddThing(new Food(FoodType.Bread, 2, 0.500f));
             // 300 gramas de vegetais com 5 dias
             p.BagOfStuff.AddThing(new Food(FoodType.Vegetables, 5, 0.300f));
             // Pistola com 1.5kg + 50 gramas por bala, carregada com 10 balas, com um custo de 250€
@@ -40,6 +41,12 @@ namespace Aula10
 
             // Quantos itens tem o jogador na mochila?
             Console.WriteLine($"Nº de itens na mochila: {p.BagOfStuff.StuffCount}");
+
+            //Mostrar o peso da mochila
+            Console.WriteLine($"Peso da mochila: {p.BagOfStuff.Weight}");
+
+            //Mostrar o valor da mochila
+            Console.WriteLine($"Valor da mochila: {p.BagOfStuff.Value}");
 
             // Percorrer itens na mochila e tentar "imprimir" cada um
             for (int i = 0; i < p.BagOfStuff.StuffCount; i++)
