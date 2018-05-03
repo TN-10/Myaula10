@@ -33,6 +33,8 @@ namespace Aula10
             p.BagOfStuff.AddThing(new Food(FoodType.Vegetables, 5, 0.300f));
             // Pistola com 1.5kg + 50 gramas por bala, carregada com 10 balas, com um custo de 250€
             p.BagOfStuff.AddThing(new Gun(1.5f, 0.050f, 10, 250));
+            // Pistola com 2kg + 2 gramas por bala, carregada com 30 balas, com um custo de 400€
+            p.BagOfStuff.AddThing(new Gun(2f, 2f, 30, 400));
             // 200 gramas de fruta fresca
             p.BagOfStuff.AddThing(new Food(FoodType.Fruit, 0, 0.200f));
 
